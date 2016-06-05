@@ -75,3 +75,6 @@ F:\konkout\test20160212\test01\bin\zh-Hans\System.Web.WebPages.Razor.resources.d
 F:\konkout\test20160212\test01\obj\Debug\test01.csprojResolveAssemblyReference.cache
 F:\konkout\test20160212\test01\obj\Debug\test01.dll
 F:\konkout\test20160212\test01\obj\Debug\test01.pdb
+F:\test git\test20160212\test01\obj\Debug\test01.csprojResolveAssemblyReference.cache
+F:\test git\test20160212\test01\obj\Debug\test01.dll
+F:\test git\test20160212\test01\obj\Debug\test01.pdb

@@ -7,6 +7,8 @@ namespace test01.Models
 {
     public class KnockoutModel
     {
-        public
+        public void Test() { }
+
+        public string Name { get; set; } 
     }
 }
