@@ -1,0 +1,12 @@
+G:\konkout\test20160212\test02\bin\Debug\test02.exe.config
+G:\konkout\test20160212\test02\bin\Debug\test02.exe
+G:\konkout\test20160212\test02\bin\Debug\test02.pdb
+G:\konkout\test20160212\test02\obj\Debug\test02.csprojResolveAssemblyReference.cache
+G:\konkout\test20160212\test02\obj\Debug\test02.exe
+G:\konkout\test20160212\test02\obj\Debug\test02.pdb
+F:\konkout\test20160212\test02\bin\Debug\test02.exe.config
+F:\konkout\test20160212\test02\obj\Debug\test02.exe
+F:\konkout\test20160212\test02\obj\Debug\test02.pdb
+F:\konkout\test20160212\test02\obj\Debug\test02.csprojResolveAssemblyReference.cache
+F:\konkout\test20160212\test02\bin\Debug\test02.exe
+F:\konkout\test20160212\test02\bin\Debug\test02.pdb

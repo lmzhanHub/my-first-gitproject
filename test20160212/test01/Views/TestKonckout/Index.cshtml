@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Scripts/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-2.2.0.min.js"></script>
+<script src="~/Scripts/bootstrap-3.3.5/bootstrap.min.js"></script>
+<script src="~/Scripts/knockout-3.4.0.js"></script>
+<!--<button type="button" class="btn btn-default"></button>-->
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">监控属性</a>
+            </h3>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="FirstName" class="col-sm-2 control-label">FirstName:</label>
+                        <div class="col-md-8">
+                            <input type="text" class="col-md-6 form-control"
+                                   placeholder="FirstName" data-bind="value:firstName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName" class="col-sm-2 control-label">LastName:</label>
+                        <div class="col-md-8">
+                            <input type="text" class="col-md-6 form-control" data-bind="value:lastName"
+                                   placeholder="LastName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="FullName" class="col-sm-2 control-label">FullName:</label>
+                        <div class="col-sm-10" data-bind="text:fullName()"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">简单绑定</a>
+            </h3>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">选择:</label>
+                        <div class="col-md-8">
+                            <select class="form-control" data-bind="options:availableCountries,optionsText:'countryName',
+                                                            value: selectedCountry, optionsCaption: 'Choose...'"></select>
+                            <button class="btn btn-default" type="button" data-bind="enable:selectedCountry,click:clearSelect">清除</button>
+                        </div>
+                    </div>
+                    <div data-bind="visible: selectedCountry">
+                        你选择的项值
+                        <span data-bind="text: selectedCountry() ? selectedCountry().countryPopulation : 'unknown'"></span>.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var viewModel = {
+        firstName: ko.observable("lm"),
+        lastName: ko.observable("liming"),
+        fullName: function () {
+            return this.firstName() + " " + this.lastName();
+        },
+        countries: ko.observableArray(['France', 'Germany', 'Spain']),
+        availableCountries: ko.observableArray([
+        { countryName: "UK", countryPopulation: 65000000 }, { countryName: "USA", countryPopulation: 320000000 }, { countryName: "Sweden", countryPopulation: 29000000 }]),
+        selectedCountry: ko.observable(), // Nothing selected by default
+        clearSelect: function () {
+            this.selectedCountry(null);
+        }
+    }
+    ko.applyBindings(viewModel);
+</script>
+
